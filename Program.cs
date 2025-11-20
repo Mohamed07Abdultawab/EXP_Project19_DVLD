@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using EXP_Project19_DVLD.Send_data_back_to_form_using_delegate;
 
 namespace EXP_Project19_DVLD
 {
@@ -16,7 +17,7 @@ namespace EXP_Project19_DVLD
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new DelegateFrm1());
         }
     }
 }

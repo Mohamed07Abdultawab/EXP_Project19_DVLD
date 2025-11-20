@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace EXP_Project19_DVLD
 {
-    public partial class Form1 : Form
+    public partial class SendDataFrm1 : Form
     {
-        public Form1()
+        public SendDataFrm1()
         {
             InitializeComponent();
         }
@@ -22,7 +22,7 @@ namespace EXP_Project19_DVLD
             int personid = -1;
             if(int.TryParse(textBox1.Text,out personid))
             {
-                Form frm = new Form2(personid);
+                Form frm = new SendDataFrm2(personid);
                 frm.ShowDialog();
             }
             else

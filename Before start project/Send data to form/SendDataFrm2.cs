@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace EXP_Project19_DVLD
 {
-    public partial class Form2 : Form
+    public partial class SendDataFrm2 : Form
     {
         private int _PersoneID;
-        public Form2(int personid)
+        public SendDataFrm2(int personid)
         {
             InitializeComponent();
             _PersoneID = personid;

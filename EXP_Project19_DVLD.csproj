@@ -46,25 +46,43 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="Before start project\Send data back to form using delegate\DelegateFrm1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Before start project\Send data back to form using delegate\DelegateFrm1.Designer.cs">
+      <DependentUpon>DelegateFrm1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form2.cs">
+    <Compile Include="Before start project\Send data back to form using delegate\DelegateFrm2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <Compile Include="Before start project\Send data back to form using delegate\DelegateFrm2.Designer.cs">
+      <DependentUpon>DelegateFrm2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Before start project\Send data to form\SendDataFrm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Before start project\Send data to form\SendDataFrm1.Designer.cs">
+      <DependentUpon>SendDataFrm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Before start project\Send data to form\SendDataFrm2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Before start project\Send data to form\SendDataFrm2.Designer.cs">
+      <DependentUpon>SendDataFrm2.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Before start project\Send data back to form using delegate\DelegateFrm1.resx">
+      <DependentUpon>DelegateFrm1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form2.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <EmbeddedResource Include="Before start project\Send data back to form using delegate\DelegateFrm2.resx">
+      <DependentUpon>DelegateFrm2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Before start project\Send data to form\SendDataFrm1.resx">
+      <DependentUpon>SendDataFrm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Before start project\Send data to form\SendDataFrm2.resx">
+      <DependentUpon>SendDataFrm2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -88,5 +106,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,6 +1,6 @@
 ﻿namespace EXP_Project19_DVLD
 {
-    partial class Form1
+    partial class SendDataFrm1
     {
         /// <summary>
         /// Required designer variable.
