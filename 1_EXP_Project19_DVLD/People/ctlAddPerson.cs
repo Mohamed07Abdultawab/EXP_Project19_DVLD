@@ -16,5 +16,10 @@ namespace EXP_Project19_DVLD.People
         {
             InitializeComponent();
         }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
     }
 }
