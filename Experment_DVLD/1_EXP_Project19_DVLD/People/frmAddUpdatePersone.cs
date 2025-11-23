@@ -31,6 +31,7 @@ namespace EXP_Project19_DVLD.People
         public frmAddUpdatePersone()
         {
             InitializeComponent();
+            this.AutoValidate = AutoValidate.EnableAllowFocusChange;
             _Mode = enMode.AddNew;
         }
 
@@ -63,7 +64,7 @@ namespace EXP_Project19_DVLD.People
             {
                 lblTitle.Text = "Update Person";
             }
-
+            rbMale.Checked = true;
             if (rbMale.Checked)
             {
                 pbProfile.Image = Resources.Male_512;
@@ -104,7 +105,7 @@ namespace EXP_Project19_DVLD.People
             }
             lblTitle.Text = "Update Person";
             txtFirstName.Text = _Person.FirstName;
-            txtLastName.Text = _Person.LastName;
+            txtSecondName.Text = _Person.SecondName;
             txtThirdName.Text = _Person.ThirdName;
             txtLastName.Text = _Person.LastName;
             dtDateOfBirth.Value = _Person.BirthDate;
@@ -148,43 +149,47 @@ namespace EXP_Project19_DVLD.People
 
         private void ValidateEmptyTextBox(object sender, CancelEventArgs e)
         {
-            TextBox textBox = (TextBox)sender;
-            if (string.IsNullOrWhiteSpace(textBox.Text.Trim()))
+            TextBox Temp = ((TextBox)sender);
+            if (string.IsNullOrWhiteSpace(Temp.Text))
             {
                 e.Cancel = true;
-                errorProvider1.SetError(textBox, "This field is required.");
+                errorProvider1.SetError(Temp, "This field is required.");
             }
             else
-                errorProvider1.SetError(textBox, "");
+                errorProvider1.SetError(Temp, null);
         }
 
         private void txtNationalNo_Validating(object sender, CancelEventArgs e)
         {
-            if(string.IsNullOrEmpty(txtNationalNo.Text.Trim()))
+            var input = txtNationalNo.Text.Trim();
+            if (string.IsNullOrEmpty(input))
             {
                 e.Cancel = true;
                 errorProvider1.SetError(txtNationalNo, "This field is required.");
                 return;
             }
-            errorProvider1.SetError(txtNationalNo, "");
 
-            //make sure national no is unique
-            if(txtNationalNo.Text.Trim() != _Person.NationalNo && clsPerson.isPerosonExist(txtNationalNo.Text.Trim()))
+            if (!string.Equals(input, _Person.NationalNo ?? "", StringComparison.Ordinal)
+                && clsPerson.isPerosonExist(input))
             {
                 e.Cancel = true;
-                errorProvider1.SetError(txtNationalNo, "This National No is already exist.");
+                errorProvider1.SetError(txtNationalNo, "This National No already exists.");
             }
             else
+            {
                 errorProvider1.SetError(txtNationalNo, "");
+            }
+
         }
 
         private void txtEmail_Validating(object sender, CancelEventArgs e)
         {
-            if(!string.IsNullOrEmpty(txtEmail.Text.Trim()))
+            var text = txtEmail.Text?.Trim();
+            if (!string.IsNullOrEmpty(text))
             {
                 try
                 {
-                    var addr = new System.Net.Mail.MailAddress(txtEmail.Text);
+                    var addr = new System.Net.Mail.MailAddress(text);
                     errorProvider1.SetError(txtEmail, "");
                 }
                 catch
@@ -193,25 +198,31 @@ namespace EXP_Project19_DVLD.People
                     errorProvider1.SetError(txtEmail, "Invalid Email Address.");
                 }
             }
-            errorProvider1.SetError(txtEmail, "");
+            else
+            {
+                errorProvider1.SetError(txtEmail, "");
+            }
         }
+
 
 
         private void btnSave_Click(object sender, EventArgs e)
         {
             if (!this.ValidateChildren())
             {
-                MessageBox.Show("Some fileds are not valide!, put the mouse over thr red icon(s) to see error","Validation Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                //Here we dont continue becuase the form is not valid
+                MessageBox.Show("Some fileds are not valide!, put the mouse over the red icon(s) to see the erro", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
-            }
-            //handlePersonImage
 
-            //clsCountry country = clsCountry.Find(cbCountry.Text);
-            //int NationalityCountryID = country.CountryID;
+            }
+
+            //if (!_HandlePersonImage())
+            //    return;
+
             int NationalityCountryID = clsCountry.Find(cbCountry.Text).CountryID;
 
             _Person.FirstName = txtFirstName.Text.Trim();
-            _Person.Seondname = txtSecondName.Text.Trim();
+            _Person.SecondName = txtSecondName.Text.Trim();
             _Person.ThirdName = txtThirdName.Text.Trim();
             _Person.LastName = txtLastName.Text.Trim();
             _Person.NationalNo = txtNationalNo.Text.Trim();
@@ -221,9 +232,7 @@ namespace EXP_Project19_DVLD.People
             _Person.BirthDate = dtDateOfBirth.Value;
 
             if (rbMale.Checked)
-            {
                 _Person.Gendor = (short)enGendor.Male;
-            }
             else
                 _Person.Gendor = (short)enGendor.Female;
 
@@ -234,23 +243,23 @@ namespace EXP_Project19_DVLD.People
             else
                 _Person.ImagePath = "";
 
-            if(_Person.Save())
+            if (_Person.Save())
             {
-                //after click save botton weill show up the personID
                 lblPersonID.Text = _Person.PersonID.ToString();
-
-                //changing mode to update
+                //change form mode to update.
                 _Mode = enMode.Update;
                 lblTitle.Text = "Update Person";
 
-                MessageBox.Show("Data Saved Successfully.","Saved",MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Data Saved Successfully.", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 
-                //trigger the even to send data back to the caller form.
+                // Trigger the event to send data back to the caller form.
                 DataBack?.Invoke(this, _Person.PersonID);
             }
             else
-                MessageBox.Show("Error, Data is not saved successfully.","Error",MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error: Data Is not Saved Successfully.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+
 
         }
 
@@ -283,6 +292,11 @@ namespace EXP_Project19_DVLD.People
         private bool _HandlePersonImage()
         {
             return true;
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

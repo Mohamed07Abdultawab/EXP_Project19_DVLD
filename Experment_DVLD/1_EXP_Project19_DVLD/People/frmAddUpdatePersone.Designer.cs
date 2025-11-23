@@ -140,6 +140,7 @@
             this.btnClose.TabIndex = 151;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // txtAddress
             // 
@@ -425,6 +426,7 @@
             // 
             // rbFemale
             // 
+            this.rbFemale.AutoCheck = false;
             this.rbFemale.AutoSize = true;
             this.rbFemale.Location = new System.Drawing.Point(281, 148);
             this.rbFemale.Name = "rbFemale";

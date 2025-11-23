@@ -17,14 +17,14 @@ namespace _2_BusinessLayer
 
         public int PersonID { get; set; }
         public string FirstName { get; set; }
-        public string Seondname { get; set; }
+        public string SecondName { get; set; }
         public string ThirdName { get; set; }
         public string LastName { get; set; }
         public string FullName
         {
             get
             {
-                return FirstName + " " + Seondname + " " + ThirdName + " " + LastName;
+                return FirstName + " " + SecondName + " " + ThirdName + " " + LastName;
             }
         }
         public string NationalNo { get; set; }
@@ -47,7 +47,7 @@ namespace _2_BusinessLayer
         {
             PersonID = 0;
             FirstName = string.Empty;
-            Seondname = string.Empty;
+            SecondName = string.Empty;
             ThirdName = string.Empty;
             LastName = string.Empty;
             NationalNo = string.Empty;
@@ -69,7 +69,7 @@ namespace _2_BusinessLayer
         {
             this.PersonID = PersonID;
             this.FirstName = FirstName;
-            this.Seondname = SecondName;
+            this.SecondName = SecondName;
             this.ThirdName = ThirdName;
             this.LastName = LastName;
             this.NationalNo = NationalNo;
@@ -87,7 +87,7 @@ namespace _2_BusinessLayer
 
         private bool _AddNewPerson()
         {
-            this.PersonID = clsPersonData.AddNewPerson(this.FirstName, this.Seondname, this.ThirdName,
+            this.PersonID = clsPersonData.AddNewPerson(this.FirstName, this.SecondName, this.ThirdName,
                 this.LastName, this.NationalNo, this.BirthDate, this.Gendor,
                  this.Address, this.Phone, this.Email,
                 this.NationalityCountryID, this.ImagePath);
@@ -97,7 +97,7 @@ namespace _2_BusinessLayer
 
         private bool _UpdatePerson()
         {
-            return clsPersonData.UpdatePerson(this.PersonID, this.FirstName, this.Seondname, this.ThirdName,
+            return clsPersonData.UpdatePerson(this.PersonID, this.FirstName, this.SecondName, this.ThirdName,
                 this.LastName, this.NationalNo, this.BirthDate, this.Gendor,
                  this.Address, this.Phone, this.Email,  
                 this.NationalityCountryID, this.ImagePath);
