@@ -71,6 +71,7 @@
             this.dtDateOfBirth = new System.Windows.Forms.DateTimePicker();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.llRemoveImage = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -127,7 +128,7 @@
             // 
             // btnClose
             // 
-            this.btnClose.Image = global::EXP_Project19_DVLD.Properties.Resources.Close_32;
+            this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
             this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnClose.Location = new System.Drawing.Point(448, 343);
             this.btnClose.Name = "btnClose";
@@ -155,7 +156,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.Image = global::EXP_Project19_DVLD.Properties.Resources.Save_32;
+            this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
             this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSave.Location = new System.Drawing.Point(596, 343);
             this.btnSave.Name = "btnSave";
@@ -262,7 +263,7 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Image = global::EXP_Project19_DVLD.Properties.Resources.Man_32;
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.Location = new System.Drawing.Point(125, 151);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(29, 24);
@@ -272,7 +273,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::EXP_Project19_DVLD.Properties.Resources.Person_32;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.InitialImage = null;
             this.pictureBox1.Location = new System.Drawing.Point(125, 46);
             this.pictureBox1.Name = "pictureBox1";
@@ -391,7 +392,7 @@
             // 
             // pictureBox7
             // 
-            this.pictureBox7.Image = global::EXP_Project19_DVLD.Properties.Resources.Woman_32;
+            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
             this.pictureBox7.Location = new System.Drawing.Point(246, 151);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(29, 24);
@@ -416,7 +417,6 @@
             this.rbFemale.Name = "rbFemale";
             this.rbFemale.Size = new System.Drawing.Size(92, 28);
             this.rbFemale.TabIndex = 145;
-            this.rbFemale.TabStop = true;
             this.rbFemale.Text = "Female";
             this.rbFemale.UseVisualStyleBackColor = true;
             // 
@@ -437,7 +437,6 @@
             this.rbMale.Name = "rbMale";
             this.rbMale.Size = new System.Drawing.Size(69, 28);
             this.rbMale.TabIndex = 144;
-            this.rbMale.TabStop = true;
             this.rbMale.Text = "Male";
             this.rbMale.UseVisualStyleBackColor = true;
             // 
@@ -471,6 +470,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.llRemoveImage);
             this.groupBox1.Controls.Add(this.txtFirstName);
             this.groupBox1.Controls.Add(this.btnClose);
             this.groupBox1.Controls.Add(this.pictureBox6);
@@ -514,6 +514,16 @@
             this.groupBox1.TabIndex = 153;
             this.groupBox1.TabStop = false;
             // 
+            // llRemoveImage
+            // 
+            this.llRemoveImage.AutoSize = true;
+            this.llRemoveImage.Location = new System.Drawing.Point(852, 292);
+            this.llRemoveImage.Name = "llRemoveImage";
+            this.llRemoveImage.Size = new System.Drawing.Size(81, 24);
+            this.llRemoveImage.TabIndex = 153;
+            this.llRemoveImage.TabStop = true;
+            this.llRemoveImage.Text = "Remove";
+            // 
             // frmAddUpdatePersone
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
@@ -529,6 +539,7 @@
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "frmAddUpdatePersone";
             this.Text = "frmAddNewPerson";
+            this.Load += new System.EventHandler(this.frmAddUpdatePersone_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -590,5 +601,6 @@
         private System.Windows.Forms.DateTimePicker dtDateOfBirth;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.LinkLabel llRemoveImage;
     }
 }

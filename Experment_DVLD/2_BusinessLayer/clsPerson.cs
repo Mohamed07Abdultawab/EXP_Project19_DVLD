@@ -34,6 +34,7 @@ namespace _2_BusinessLayer
         public string Phone { get; set; }
         public string Email { get; set; }
         public int NationalityCountryID { get; set; }
+        public clsCountry CountryInfo;
         private string _ImagePath;
         public string ImagePath
         {
@@ -79,6 +80,7 @@ namespace _2_BusinessLayer
             this.Email = Email;
             this.NationalityCountryID = NationalityCountryID;
             this.ImagePath = ImagePath;
+            this.CountryInfo = clsCountry.Find(NationalityCountryID);
 
             Mode = enMode.Update;
         }
