@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace EXP_Project19_DVLD.People
 {
-    public partial class frmAddNewPerson : Form
+    public partial class frmAddUpdatePersone : Form
     {
-        public frmAddNewPerson()
+        public frmAddUpdatePersone()
         {
             InitializeComponent();
         }

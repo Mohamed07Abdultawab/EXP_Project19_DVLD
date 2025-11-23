@@ -82,17 +82,11 @@
     <Compile Include="Before start project\3Simple event with parametar\EventFrm1.Designer.cs">
       <DependentUpon>EventFrm1.cs</DependentUpon>
     </Compile>
-    <Compile Include="People\ctlAddPerson.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="People\ctlAddPerson.Designer.cs">
-      <DependentUpon>ctlAddPerson.cs</DependentUpon>
-    </Compile>
-    <Compile Include="People\frmAddNewPerson.cs">
+    <Compile Include="People\frmAddUpdatePersone.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="People\frmAddNewPerson.Designer.cs">
-      <DependentUpon>frmAddNewPerson.cs</DependentUpon>
+    <Compile Include="People\frmAddUpdatePersone.Designer.cs">
+      <DependentUpon>frmAddUpdatePersone.cs</DependentUpon>
     </Compile>
     <Compile Include="People\frmManagePeople.cs">
       <SubType>Form</SubType>
@@ -120,11 +114,8 @@
     <EmbeddedResource Include="Before start project\3Simple event with parametar\EventFrm1.resx">
       <DependentUpon>EventFrm1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="People\ctlAddPerson.resx">
-      <DependentUpon>ctlAddPerson.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="People\frmAddNewPerson.resx">
-      <DependentUpon>frmAddNewPerson.cs</DependentUpon>
+    <EmbeddedResource Include="People\frmAddUpdatePersone.resx">
+      <DependentUpon>frmAddUpdatePersone.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="People\frmManagePeople.resx">
       <DependentUpon>frmManagePeople.cs</DependentUpon>

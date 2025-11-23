@@ -1,0 +1,6 @@
+C:\Users\ma705\Desktop\EXP_DVLD_Project\Experment_DVLD\3_DataAccessLayer\bin\Debug\3_DataAccessLayer.dll
+C:\Users\ma705\Desktop\EXP_DVLD_Project\Experment_DVLD\3_DataAccessLayer\bin\Debug\3_DataAccessLayer.pdb
+C:\Users\ma705\Desktop\EXP_DVLD_Project\Experment_DVLD\3_DataAccessLayer\obj\Debug\3_DataAccessLayer.csproj.AssemblyReference.cache
+C:\Users\ma705\Desktop\EXP_DVLD_Project\Experment_DVLD\3_DataAccessLayer\obj\Debug\3_DataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\ma705\Desktop\EXP_DVLD_Project\Experment_DVLD\3_DataAccessLayer\obj\Debug\3_DataAccessLayer.dll
+C:\Users\ma705\Desktop\EXP_DVLD_Project\Experment_DVLD\3_DataAccessLayer\obj\Debug\3_DataAccessLayer.pdb

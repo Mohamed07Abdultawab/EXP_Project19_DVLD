@@ -1,0 +1,9 @@
+C:\Users\ma705\Desktop\EXP_DVLD_Project\Experment_DVLD\2_BusinessLayer\bin\Debug\2_BusinessLayer.dll
+C:\Users\ma705\Desktop\EXP_DVLD_Project\Experment_DVLD\2_BusinessLayer\bin\Debug\2_BusinessLayer.pdb
+C:\Users\ma705\Desktop\EXP_DVLD_Project\Experment_DVLD\2_BusinessLayer\bin\Debug\3_DataAccessLayer.dll
+C:\Users\ma705\Desktop\EXP_DVLD_Project\Experment_DVLD\2_BusinessLayer\bin\Debug\3_DataAccessLayer.pdb
+C:\Users\ma705\Desktop\EXP_DVLD_Project\Experment_DVLD\2_BusinessLayer\obj\Debug\2_BusinessLayer.csproj.AssemblyReference.cache
+C:\Users\ma705\Desktop\EXP_DVLD_Project\Experment_DVLD\2_BusinessLayer\obj\Debug\2_BusinessLayer.csproj.CoreCompileInputs.cache
+C:\Users\ma705\Desktop\EXP_DVLD_Project\Experment_DVLD\2_BusinessLayer\obj\Debug\2_Busine.0A43CB86.Up2Date
+C:\Users\ma705\Desktop\EXP_DVLD_Project\Experment_DVLD\2_BusinessLayer\obj\Debug\2_BusinessLayer.dll
+C:\Users\ma705\Desktop\EXP_DVLD_Project\Experment_DVLD\2_BusinessLayer\obj\Debug\2_BusinessLayer.pdb

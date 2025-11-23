@@ -20,7 +20,7 @@ namespace EXP_Project19_DVLD
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmAddNewPerson());
+            Application.Run(new frmAddUpdatePersone());
         }
     }
 }
