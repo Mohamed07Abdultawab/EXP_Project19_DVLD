@@ -86,17 +86,35 @@
     <Compile Include="Global Classes\clsGlobal.cs" />
     <Compile Include="Global Classes\clsValidation.cs" />
     <Compile Include="Global Classes\util.cs" />
+    <Compile Include="People\ctlPersonCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="People\ctlPersonCard.Designer.cs">
+      <DependentUpon>ctlPersonCard.cs</DependentUpon>
+    </Compile>
     <Compile Include="People\frmAddUpdatePersone.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="People\frmAddUpdatePersone.Designer.cs">
       <DependentUpon>frmAddUpdatePersone.cs</DependentUpon>
     </Compile>
-    <Compile Include="People\frmManagePeople.cs">
+    <Compile Include="People\frmFindPerson.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="People\frmManagePeople.Designer.cs">
-      <DependentUpon>frmManagePeople.cs</DependentUpon>
+    <Compile Include="People\frmFindPerson.Designer.cs">
+      <DependentUpon>frmFindPerson.cs</DependentUpon>
+    </Compile>
+    <Compile Include="People\frmListPeople.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="People\frmListPeople.Designer.cs">
+      <DependentUpon>frmListPeople.cs</DependentUpon>
+    </Compile>
+    <Compile Include="People\frmShowPersonInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="People\frmShowPersonInfo.Designer.cs">
+      <DependentUpon>frmShowPersonInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -118,11 +136,14 @@
     <EmbeddedResource Include="Before start project\3Simple event with parametar\EventFrm1.resx">
       <DependentUpon>EventFrm1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="People\ctlPersonCard.resx">
+      <DependentUpon>ctlPersonCard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="People\frmAddUpdatePersone.resx">
       <DependentUpon>frmAddUpdatePersone.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="People\frmManagePeople.resx">
-      <DependentUpon>frmManagePeople.cs</DependentUpon>
+    <EmbeddedResource Include="People\frmListPeople.resx">
+      <DependentUpon>frmListPeople.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -485,6 +506,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Written Test 512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Person 321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Person 322.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Number 321.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -793,9 +793,9 @@ namespace EXP_Project19_DVLD.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Person_32 {
+        internal static System.Drawing.Bitmap Person_321 {
             get {
-                object obj = ResourceManager.GetObject("Person_32", resourceCulture);
+                object obj = ResourceManager.GetObject("Person 321", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

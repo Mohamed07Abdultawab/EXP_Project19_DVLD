@@ -1,6 +1,6 @@
 ﻿namespace EXP_Project19_DVLD.People
 {
-    partial class frmManagePeople
+    partial class frmShowPersonInfo
     {
         /// <summary>
         /// Required designer variable.
@@ -28,17 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.SuspendLayout();
-            // 
-            // frmManagePeople
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1278, 587);
-            this.Name = "frmManagePeople";
-            this.Text = "frmManagePeople";
-            this.ResumeLayout(false);
-
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Text = "frmShowPersonInfo";
         }
 
         #endregion
