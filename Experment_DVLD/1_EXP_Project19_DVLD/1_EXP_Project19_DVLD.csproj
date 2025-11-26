@@ -82,6 +82,10 @@
     <Compile Include="Before start project\3Simple event with parametar\EventFrm1.Designer.cs">
       <DependentUpon>EventFrm1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Global Classes\clsFormat.cs" />
+    <Compile Include="Global Classes\clsGlobal.cs" />
+    <Compile Include="Global Classes\clsValidation.cs" />
+    <Compile Include="Global Classes\util.cs" />
     <Compile Include="People\frmAddUpdatePersone.cs">
       <SubType>Form</SubType>
     </Compile>

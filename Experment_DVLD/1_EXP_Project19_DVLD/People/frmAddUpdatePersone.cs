@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
@@ -73,7 +74,7 @@ namespace EXP_Project19_DVLD.People
             {
                 pbProfile.Image = Resources.Female_512;
             }
-            llRemoveImage.Visible = (pbProfile.ImageLocation != "");//show it if there is an image
+            llRemoveImage.Visible = (pbProfile.ImageLocation == "");//show it if there is an image
 
             dtDateOfBirth.MaxDate = DateTime.Now.AddYears(-18);
             dtDateOfBirth.Value = dtDateOfBirth.MaxDate;
@@ -291,6 +292,34 @@ namespace EXP_Project19_DVLD.People
         //handlePersonImage in next time
         private bool _HandlePersonImage()
         {
+            if(_Person.ImagePath == pbProfile.ImageLocation)
+            {
+                if (_Person.ImagePath != "")
+                {
+                    try
+                    {
+                        File.Delete(_Person.ImagePath);
+                    }
+                    catch (Exception ex)
+                    {
+
+                    }
+                }
+
+                if(pbProfile.ImageLocation != null)
+                {
+                    string originalFilePath = pbProfile.ImageLocation;
+                    if (Global_Classes.util.CopyImageToProjectImageFolder(ref originalFilePath))
+                    {
+                        pbProfile.ImageLocation = originalFilePath;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error copying image to project folder.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return false;
+                    }
+                }
+            }
             return true;
         }
 
